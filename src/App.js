@@ -1,4 +1,5 @@
 import "./App.css";
+import { motion } from "framer-motion";
 import NavBar from "./components/NavBar";
 import Lead from "./components/Lead";
 import About from "./components/Aboutme";
@@ -16,14 +17,23 @@ function App() {
   return (
     <div className="App">
       {/* <NavBar /> */}
-      <NavB />
+      <motion.div
+        className="title"
+        initial={{ position: "relative", top: -250 }}
+        animate={{ top: -10 }}
+        transition={{ delay: 1, type: "spring", stiffness: 300 }}
+        default={{ duration: 18 }}
+      >
+        <NavB />
+      </motion.div>
+
       <Lead />
       <About />
       <Timeline />
       <Skills />
       <MailMe />
-      <Footer/>
-      <Map/>
+      <Footer />
+      <Map />
     </div>
   );
 }

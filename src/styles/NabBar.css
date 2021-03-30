@@ -12,3 +12,6 @@ nav {
   width: 100vw !important;
   justify-content: center;
 }
+.navbar-toggler {
+  z-index: 999;
+}
