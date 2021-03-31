@@ -1,5 +1,5 @@
 #lead {
-  position: relative;
+
   height: 100vh;
   min-height: 500px;
   max-height: 1080px;
@@ -7,7 +7,6 @@
   background-size: cover !important; 
   padding: 15px;
   overflow: hidden !important;
-  position: gotcha;
 }
 #lead-content {
   position: absolute;
@@ -36,16 +35,15 @@
   margin-bottom: 15px;
 }
 #lead-overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
   top: 0;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
   right: 0;
   bottom: 0;
   left: 0;
   background: rgba(33, 125, 187, 0.8);
   z-index: 1;
-  position: gotcha;
 }
 #lead-down {
   position: absolute;
@@ -57,16 +55,7 @@
   bottom: 15px;
   color: #fff;
 }
-#lead-down span {
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 3px solid #a0cfee;
-  text-align: center;
-}
+
 #lead-down i {
   animation: pulsate 1.5s ease;
   animation-iteration-count: infinite;
