@@ -12,30 +12,21 @@ import Map from "./components/Map";
 import Navbar2 from "./components/Navbar2";
 import "./styles/NavBar2.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-// import { InfoData, InfoDataTwo } from './InfoData';
+import { Link } from "react-scroll";
 
 function App() {
   return (
     <div className="App">
-      <motion.div
-        className="title"
-        initial={{ position: "relative", top: -250 }}
-        animate={{ top: -10 }}
-        transition={{ delay: 1, type: "spring", stiffness: 300 }}
-        default={{ duration: 18 }}
-      ></motion.div>
-      <Router>
-        <Navbar2 />
+      <Navbar2 />
 
-        <Lead />
-        <About />
-        <Timeline />
-        <Skills />
-        <MailMe />
-        <Footer />
-        <Map />
-      </Router>
+      <Lead />
+      <About />
+      <Timeline />
+      <Skills />
+      <MailMe />
+      <Footer />
+
+
     </div>
   );
 }

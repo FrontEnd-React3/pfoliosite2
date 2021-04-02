@@ -1,19 +1,24 @@
 import React from "react";
 import "../styles/Skills.css";
+// import Scrollcorrector from "./Scrollc";
 
 function skills() {
   return (
     <div>
+      {/* <Scrollcorrector /> */}
       <div>
-        <h2 id="skills" class="heading">Skills</h2>
+        <h2 id="skills" class="heading">
+          Skills
+        </h2>
 
         <ul className="SkillsUl">
           <li>Grid</li>
           <li>Flexbox</li>
           <li>SASS</li>
           <li>CSS</li>
-          <li>Bootstrap</li>        </ul>
-<ul className="SkillsUl">
+          <li>Bootstrap</li>{" "}
+        </ul>
+        <ul className="SkillsUl">
           <li> Styled Components (React) </li>
           <li> UI/UX libraries - Material design </li>
         </ul>
@@ -21,7 +26,8 @@ function skills() {
         <ul className="SkillsUl">
           <li className="Skillsimp">JavaScript</li>
           <li>JQuery</li>
-          <li className="Skillsimp">React </li><li> Context</li>
+          <li className="Skillsimp">React </li>
+          <li> Context</li>
           <li>Framer - Motion</li>
           <li>Node.js</li>
         </ul>

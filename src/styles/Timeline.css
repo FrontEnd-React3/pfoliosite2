@@ -28,7 +28,9 @@ p {
   top: 7px;
   width: 4px;
   height: 100%;
-  background: #778ba5;
+  background:#778ba5; 
+  background-image: linear-gradient(#778ba5, #778ba5, #ccd3e3, rgb(235, 235, 235));
+
 }
 .timeline .timeline-container {
   position: relative;
