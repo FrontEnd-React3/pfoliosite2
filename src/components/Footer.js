@@ -18,9 +18,8 @@ function Footer() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-xs-12 phone col-sm-4">
-          <FaPhone className="fa fa-phone" aria-hidden="true"></FaPhone> 0499
-          388 227
+        <div className="col-xs-12 address col-sm-4">
+          <strong>Benedikt Lantsoght,</strong> Soldatenstraat 63, <br/>1082 St Ag. Berchem - Brussel
         </div>
         <div className="col-xs-12 top col-sm-4">
           <FaChevronUp id="to-top">
@@ -28,51 +27,14 @@ function Footer() {
           </FaChevronUp>
         </div>
 
-        <div className="col-xs-12 social col-sm-4">
-          <ul>
-            <li>
-              <a href="https://github.com/" target="_blank">
-                <FaGithub
-                  className="fa fa-github"
-                  aria-hidden="true"
-                ></FaGithub>
-              </a>
-            </li>
-            <li>
-              <a onClick={() => setShowmap(!showmap)}>
-                <FaMapMarkerAlt
-                  className="fa
-                                    fa-map-marker"
-                  aria-hidden="true"
-                >
-                  <div id="map">s</div>
-                </FaMapMarkerAlt>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/" target="_blank">
-                <FaEnvelope
-                  className="fa
-                                    fa-envelope"
-                  aria-hidden="true"
-                ></FaEnvelope>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/benedikt-lantsoght-02481319/"
-                target="_blank"
-              >
-                <FaLinkedin
-                  className="fa
-                                    fa-linkedin"
-                  aria-hidden="true"
-                ></FaLinkedin>
-              </a>
-            </li>
-          </ul>
-          {showmap ? <Map /> : null}
+        <div className="col-xs-12  address col-sm-4">
+
+          <strong>RR: 670301.2636-8,</strong> <br/>Fintro: BIC/SWIFT: GEBABEBB <br/>BE76143090907895
+
+
         </div>
+
+
       </div>
     </div>
   );

@@ -44,9 +44,11 @@
 .fa-envelope {
   font-size: 18px;
 }
-.phone {
+.address {
+  height: 100px;
   padding-top: 20px;
   color: #74808a;
+  font-size: 12px;
 }
 #to-top {
   margin: 0 auto;
@@ -83,8 +85,10 @@
   }
 }
 
-.fa-map-markermap{
+.fa-map-markermap {
   color: red;
   height: 30px;
-  width: auto;position: absolute; transform: translate(-50%, -100%)
+  width: auto;
+  position: absolute;
+  transform: translate(-50%, -100%);
 }

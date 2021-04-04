@@ -1,14 +1,41 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect  } from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { FaPhone } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-scroll";
 import "../styles/NavBar2.css";
+import { debounce } from './helpers'; 
 
 const NavBar = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const handleScroll = debounce(() => {
+  const currentScrollPos = window.pageYOffset;
+
+    setVisible(
+      (prevScrollPos < currentScrollPos &&
+        currentScrollPos - prevScrollPos > 30|| currentScrollPos < 300) 
+        
+    );
+    //bij naar bovenscrollen: toon navbar in bovenste 100 pixels hoogte homesectie van top en 30px van de bovenste rand
+    console.log("currentScrollPos  " + currentScrollPos);
+    console.log("prevScrollPos  " + prevScrollPos);
+    setPrevScrollPos(currentScrollPos);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos, visible, handleScroll]);
+  const navStyle = {
+    opacity: visible ? 1 : 0,
+    transition: "all 2s ease-in"
+  };
   return (
     <div className="App">
-      <ReactBootStrap.Navbar
+      <ReactBootStrap.Navbar       style={{ top: visible ? "0" : "-68px" }} style={navStyle}
+
         collapseOnSelect
         expand="md"
         variant="dark"
