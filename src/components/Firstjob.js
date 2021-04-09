@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Firstjob.css";
 import "../styles/Experience.css";
 import pf from "../images/thissite.jpg";
@@ -6,9 +6,20 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function Firstjob() {
   const [show, setShow] = useState(false);
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <div className="project-center">
+    <div
+      className="project-centertop"
+      style={{ transform: `translateY(-${offsetY * 1}px)` }}
+    >
       <div className="row bodyprim project">
         <div className="col-lg-4  col-md-12 projectimagewrapper">
           <img className="shadow  project-image" src={pf} />

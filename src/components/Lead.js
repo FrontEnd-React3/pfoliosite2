@@ -4,11 +4,12 @@ import Test from "../images/cv.png";
 import "../styles/lead.css";
 import "../styles/button.css";
 import Chevron from "../images/chevdown1.png";
-
+import "../App.css"
 export default function Lead() {
   return (
     <div>
-      <div id="lead">
+      <div id="lead" 
+ className="section">
         <div id="lead-content">
           <h1 data-aos="fade-up">Benedikt Lantsoght</h1>
           <h2 data-aos="zoom-up" data-aos-delay="1500" data-aos-duration="4500">

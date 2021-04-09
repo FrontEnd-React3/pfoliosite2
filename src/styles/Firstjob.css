@@ -1,9 +1,22 @@
-.project-center {
+.project-centertop {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5vw;
-  padding-bottom: 5vw;
+  background: pink;
+}
+.project-centersnd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: pink;
+
+}
+.project-centerthd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: pink;
+
 }
 
 .works__fat {
@@ -67,8 +80,6 @@
     margin-left: 10px !important;
   }
   .project-image {
-    margin-top: 6vw;
-    margin-bottom: 4vw;
   }
 
   .project-image {

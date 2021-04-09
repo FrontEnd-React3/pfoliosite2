@@ -22,14 +22,16 @@ function App() {
     <div className="App">
       <Navbar2 />
       <Side />
-      <Lead />
-      <About />
-      <Timeline />
-      <Works />
-      <Skills />
+      <div className="containersection">
+        <Lead className="section" />
+        <About className="section" />
+        <Timeline className="section" />
+        <Works className="section" />
+        <Skills className="section" id="Skills__section" />
 
-      <MailMe />
-      <Footer />
+        <MailMe className="section" />
+        <Footer className="section" />
+      </div>
     </div>
   );
 }

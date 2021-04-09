@@ -4,6 +4,7 @@ import "../styles/Experiences.css";
 import me from "../images/Benedikt.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Aos from "aos";
+import "../App.css";
 import "aos/dist/aos.css";
 
 function Aboutme() {
@@ -12,7 +13,7 @@ function Aboutme() {
   }, []);
   return (
     <div id="about">
-      <div className="container">
+      <div className="container section">
         <div className="row">
           <div className="col-md-4">
             <div className="mepiccont">

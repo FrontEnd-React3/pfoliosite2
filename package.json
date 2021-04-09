@@ -23,6 +23,7 @@
     "react-fade-in": "^2.0.1",
     "react-icons": "^4.2.0",
     "react-modal": "^3.12.1",
+    "react-parallax": "^3.2.1",
     "react-read-more": "^1.0.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
@@ -30,6 +31,7 @@
     "react-scroll-to": "^3.0.0-beta.6",
     "react-timelines": "^2.6.1",
     "react-vertical-timeline-component": "^3.3.3",
+    "scroll-snap": "^3.2.4",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },

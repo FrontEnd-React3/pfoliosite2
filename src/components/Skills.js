@@ -10,7 +10,7 @@ function Skills() {
   }, []);
 
   return (
-    <div>
+    <div className="Skillscontainer">
       {/* <Scrollcorrector /> */}
       <div>
         <h2 data-aos="fade-up" id="skills" class="heading">

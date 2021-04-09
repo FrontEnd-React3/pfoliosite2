@@ -1,1 +1,8 @@
-
+.Parallax {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 190vw;
+  width: 100vw;
+  background: yellow;
+}
