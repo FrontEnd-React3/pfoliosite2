@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Timeline.css";
 import me from "../images/class.jpg";
 import st from "../images/syntra.png";
 import FirstExperience from "./Firstexp";
 import SecondExperience from "./SecondExp";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Timeline() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const [show, setShow] = useState(false);
 
   return (
     <div className="containerbg">
       <div id="experience" className="background-alt">
-        <h2 className="heading">Experience</h2>
+        <h2 data-aos="fade-up" className="heading">Experience</h2>
         <p> please hover the images & use the buttons</p>
         <div className="container">
           <div className="timeline">

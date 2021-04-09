@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Skills.css";
 // import Scrollcorrector from "./Scrollc";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-function skills() {
+function Skills() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
     <div>
       {/* <Scrollcorrector /> */}
       <div>
-        <h2 id="skills" class="heading">
+        <h2 data-aos="fade-up" id="skills" class="heading">
           Skills
         </h2>
 
@@ -54,4 +60,4 @@ function skills() {
   );
 }
 
-export default skills;
+export default Skills;

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/About.css";
 import "../styles/Experiences.css";
 import me from "../images/Benedikt.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Aboutme() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
     <div id="about">
       <div className="container">
@@ -15,10 +20,12 @@ function Aboutme() {
             </div>
             <div id="mepic-overlay"></div>
 
-            <h2 className="heading">About Me</h2>
+            <h2 data-aos="fade-up" className="heading">
+              About Me
+            </h2>
           </div>
           <div className="col-md-8">
-            <p  className="inbetween  graish">
+            <p className="inbetween  graish">
               Result driven creative thinker since 1989 putting the user first,
               understanding the importance of balancing those needs with
               business requirements and development capabilities.

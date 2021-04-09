@@ -1,21 +1,21 @@
-import React, { Component, useState, useEffect  } from "react";
+import React, { Component, useState, useEffect } from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { FaPhone } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-scroll";
 import "../styles/NavBar2.css";
-import { debounce } from './helpers'; 
+import { debounce } from "./helpers";
 
 const NavBar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const handleScroll = debounce(() => {
-  const currentScrollPos = window.pageYOffset;
+    const currentScrollPos = window.pageYOffset;
 
     setVisible(
       (prevScrollPos < currentScrollPos &&
-        currentScrollPos - prevScrollPos > 30|| currentScrollPos < 300) 
-        
+        currentScrollPos - prevScrollPos > 30) ||
+        currentScrollPos < 300
     );
     //bij naar bovenscrollen: toon navbar in bovenste 100 pixels hoogte homesectie van top en 30px van de bovenste rand
     console.log("currentScrollPos  " + currentScrollPos);
@@ -29,13 +29,14 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, visible, handleScroll]);
   const navStyle = {
-    opacity: visible ? 1 : 0,
-    transition: "all 2s ease-in"
+    top: visible ? 0 : -68,
+    transition: "all 0.5s ease-in"
   };
   return (
     <div className="App">
-      <ReactBootStrap.Navbar       style={{ top: visible ? "0" : "-68px" }} style={navStyle}
-
+      <ReactBootStrap.Navbar
+        style={{ top: visible ? "0" : "-68px" }}
+        style={navStyle}
         collapseOnSelect
         expand="md"
         variant="dark"
@@ -61,38 +62,33 @@ const NavBar = () => {
                 About Me
               </ReactBootStrap.Nav.Link>
             </Link>
-            <Link activeClass="activefocus" smooth={true} duration={1000} to="experience">
-              <ReactBootStrap.Nav.Link >
-                Experience
-              </ReactBootStrap.Nav.Link>
+            <Link
+              activeClass="activefocus"
+              smooth={true}
+              duration={1000}
+              to="experience"
+            >
+              <ReactBootStrap.Nav.Link>Experience</ReactBootStrap.Nav.Link>
             </Link>
             <Link smooth={true} duration={1000} to="portfolio">
               {" "}
-              <ReactBootStrap.Nav.Link>
-                Portfolio
-              </ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link>Portfolio</ReactBootStrap.Nav.Link>
             </Link>
             <Link smooth={true} duration={1000} to="skills">
-              <ReactBootStrap.Nav.Link>
-                Skills
-              </ReactBootStrap.Nav.Link>
+              <ReactBootStrap.Nav.Link>Skills</ReactBootStrap.Nav.Link>
             </Link>
           </ReactBootStrap.Nav>
 
           <ReactBootStrap.Nav>
-          <Link smooth={true} duration={1000} to="Mailme">
-              <ReactBootStrap.Nav.Link>
-                Mail Me
-              </ReactBootStrap.Nav.Link>
-            </Link>          
+            <Link smooth={true} duration={1000} to="Mailme">
+              <ReactBootStrap.Nav.Link>Mail Me</ReactBootStrap.Nav.Link>
+            </Link>
 
             <Link smooth={true} duration={1000} to="Footer">
               <ReactBootStrap.Nav.Link eventKey={2}>
                 Contact Me
               </ReactBootStrap.Nav.Link>{" "}
             </Link>
-
-     
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>
       </ReactBootStrap.Navbar>

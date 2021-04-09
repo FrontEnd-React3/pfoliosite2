@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/Experience.css";
-import 'react-timelines/lib/css/style.css'
+import "react-timelines/lib/css/style.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Experience() {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div className="background-alt">
-      <h2  id="experience" className="heading">Experience</h2>
+    <div id="experience" className="background-alt">
+      <h2 data-aos="fade-up" className="heading">
+        Experience
+      </h2>
       <div id="experience-timeline">
         <div data-date="July 2019 – present date">
-          <h3>Web Dev Instructor </h3>
+          <h3>Web Deve Instructor </h3>
           <h4>A React love affair</h4>
           <p>
             Teaching adults to become a web developer. Being their companion and
@@ -23,8 +31,10 @@ function Experience() {
             As my end of the year project, I made a program for the UZB (Jette)
             allowing them to show and adapt the price of their treatment
             importing it from an excel file. <br /> <br />
-            The project was awarded with 98% by an independent jury @ Syntra. After the 10 month studies I looked and found a job as a web developer.
-It took one year but, I took advantage of myfree time to self-study with Youtube and Udemy.
+            The project was awarded with 98% by an independent jury @ Syntra.
+            After the 10 month studies I looked and found a job as a web
+            developer. It took one year but, I took advantage of myfree time to
+            self-study with Youtube and Udemy.
           </p>
         </div>
 

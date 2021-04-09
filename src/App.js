@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Lead from "./components/Lead";
 import About from "./components/Aboutme";
 import Experience from "./components/Experience";
+import Works from "./components/Works";
 import Timeline from "./components/Timeline";
 import Skills from "./components/Skills";
 import { Button } from "@material-ui/core";
@@ -24,12 +25,11 @@ function App() {
       <Lead />
       <About />
       <Timeline />
+      <Works />
       <Skills />
+
       <MailMe />
       <Footer />
-
-
-
     </div>
   );
 }

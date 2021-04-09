@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios-react";
 import "../styles/Emailme.css";
 import { ThemeProvider, Button, TextField } from "@material-ui/core";
@@ -6,7 +6,11 @@ import { ThemeProvider, Button, TextField } from "@material-ui/core";
 import { withStyles, createMuiTheme } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import styled from "styled-components";
-import { FaRegHandPointRight } from "react-icons/fa";
+import { FaRegHandPointRight } from "react-icons/fa";import Aos from "aos";
+import "aos/dist/aos.css";
+
+
+
 const styles = {
   button: {
     background: "#3498db",
@@ -23,6 +27,9 @@ function Mailme(props) {
     submitting: false,
     status: null
   });
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
   const ValidationTextField = withStyles({
     root: {
@@ -74,7 +81,7 @@ function Mailme(props) {
     <div id="smile-overlaycont">
       <div id="Mailmebg" className="emailcont"></div>
       <div id="smile-overlay">
-        <h2 id="Mailme" class="heading">
+        <h2 data-aos="fade-up" id="Mailme" class="heading">
           Mail Me
         </h2>
 
