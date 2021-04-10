@@ -6,19 +6,10 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function Firstjob() {
   const [show, setShow] = useState(false);
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div
       className="project-centerthd"
-      style={{ transform: `translateY(-${offsetY * 0.70}px)` }}
     >
       <div className="row bodyprim project">
         <div className="col-lg-4  col-md-12 projectimagewrapper">

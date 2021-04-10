@@ -15,11 +15,15 @@ import Side from "./components/Socialside";
 import Navbar2 from "./components/Navbar2";
 import "./styles/NavBar2.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Link } from "react-scroll";
+import ScrollToTop from "react-scroll-to-top";
 
 function App() {
   return (
     <div className="App">
+      <ScrollToTop
+        smooth
+        color="gray"
+      />
       <Navbar2 />
       <Side />
       <div className="containersection">

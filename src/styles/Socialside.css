@@ -105,6 +105,10 @@ video {
   position: absolute;
   top: 25px;
 }
+#uitschuiverphone {
+  width: 108px;
+  margin-top: 275%;
+}
 .uitschuiverli {
   z-index: 999;
 }

@@ -44,7 +44,9 @@ function Socialside() {
     transition: "top 0.6s"
   };
 
+  // const [show, setShow] = useState[false, false];
   const [show, setShow] = useState(false);
+  const [showt, setShowt] = useState(false);
   const sideStyle = {
     left: visible ? 0 : -30,
     transition: "all 1s ease-in"
@@ -78,6 +80,17 @@ function Socialside() {
             <img className="whatsapplogo" src={Whatsapp} alt="Whatsapp" />
             <div id="whatsapp"></div>
           </a>
+        </li>
+        <li className="uitschuiverli" onMouseEnter={() => setShowt(!showt)}>
+          <a target="_blank">
+            <FaPhone className="fa envelopeicon fa-envelope"></FaPhone>
+            <div id="phone"></div>
+          </a>
+          {showt ? (
+            <div id="uitschuiverphone" className="uitschuiverstyle">
+              0499 388 227
+            </div>
+          ) : null}
         </li>
         <li>
           <a

@@ -70,7 +70,7 @@ const NavBar = () => {
             >
               <ReactBootStrap.Nav.Link>Experience</ReactBootStrap.Nav.Link>
             </Link>
-            <Link smooth={true} duration={1000} to="portfolio">
+            <Link smooth={true} duration={1000} to="works">
               {" "}
               <ReactBootStrap.Nav.Link>Portfolio</ReactBootStrap.Nav.Link>
             </Link>

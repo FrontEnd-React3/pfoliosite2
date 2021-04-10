@@ -3,6 +3,8 @@ import Whatsapp from "../images/Whatsapp.svg";
 import Test from "../images/cv.png";
 import "../styles/lead.css";
 import "../styles/button.css";
+import cv from '../images/cv-ben-nl.pdf';
+
 import Chevron from "../images/chevdown1.png";
 import "../App.css"
 export default function Lead() {
@@ -16,7 +18,7 @@ export default function Lead() {
             React Developer
           </h2>
 
-          <a href="../images/class.jpg" download className="btn-rounded-white">
+          <a href={cv} download className="btn-rounded-white">
             {/* <img src={Test} alt="test"/> */}
             Download Resume
           </a>

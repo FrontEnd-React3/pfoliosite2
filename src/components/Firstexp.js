@@ -78,7 +78,6 @@ function FirstExp() {
         ) : null}
 
         <div className="inbetween graish">
-          {" "}
           Having a graphice designer background myself obliges my students to
           have a sexy result, it is mainly a Front-End Course and I am proud
           when students find a job during or soon after my course.

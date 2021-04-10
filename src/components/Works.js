@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Works.css";
 import "../styles/Experience.css";
+import "../styles/Emailme.css";
 import "../styles/Works.css";
 import Firstjob from "./Firstjob";
 import Secondjob from "./Secondjob";
@@ -14,14 +15,18 @@ function Works() {
   }, []);
 
   return (
-    <div id="works" className="Parallax" >
-      
-      <h2 data-aos="fade-up" className="heading">
-        Works
-      </h2>
-      <Firstjob />
-      <Secondjob />
-      <Thirdjob />
+    <div className="Parallax">   
+      <div id="boud-overlay">
+        <h2 data-aos="fade-up" id="works" class="heading">
+          Works
+        </h2>
+        <Secondjob />
+        <Thirdjob />
+
+        {/* <Firstjob /> */}
+     
+      </div>
+      {/* smile-overlay */}
     </div>
   );
 }

@@ -3,23 +3,33 @@ import "../styles/Firstjob.css";
 import "../styles/Experience.css";
 import pf from "../images/thissite.jpg";
 import "bootstrap/dist/css/bootstrap.css";
+import Modal from "./Modal";
+import ReactDOM from "react-dom";
 
+const BUTTON_WRAPPER_STYLES = {
+  position: "relative",
+  zIndex: 1
+};
+
+const OTHER_CONTENT_STYLES = {
+  position: "relative",
+  zIndex: 2,
+  backgroundColor: "red",
+  padding: "10px"
+};
 function Firstjob() {
   const [show, setShow] = useState(false);
-  const [offsetY, setOffsetY] = useState(0);
-  const handleScroll = () => setOffsetY(window.pageYOffset);
+  // const [offsetY, setOffsetY] = useState(0);
+  // const handleScroll = () => setOffsetY(window.pageYOffset);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  return (
-    <div
-      className="project-centertop"
-      style={{ transform: `translateY(-${offsetY * 1}px)` }}
-    >
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+  const [isOpen, setIsOpen] = useState(false);
+  return ReactDOM.createPortal(
+    <div style={OTHER_CONTENT_STYLES} className="project-centertop">
       <div className="row bodyprim project">
         <div className="col-lg-4  col-md-12 projectimagewrapper">
           <img className="shadow  project-image" src={pf} />
@@ -37,13 +47,17 @@ function Firstjob() {
             competition sells better quality customers tend to have confidence
             in the nicest looking site. <br />
             Design generates profit. <br />
-            <div className="project-view">
+            <div onClick={() => setIsOpen(true)} className="project-view">
               <a href="#">View Project</a>
             </div>
+            <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+              Fancy Modal
+            </Modal>
           </p>
         </div>
       </div>
-    </div>
+    </div>,
+    document.getElementById('portal-root')
   );
 }
 

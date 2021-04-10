@@ -1,7 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Footer.css";
-import "../styles/button.css";
+import "../styles/button.css";import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+import { debounce } from "./helpers";
 // import {linkedin-square} from '@fortawesome/free-solid-svg-icons'
 import {
   FaPhone,
@@ -21,7 +23,7 @@ function Footer() {
           388 227
         </div>
         <div className="col-xs-12 top col-sm-4">
-          <FaChevronUp id="to-top">
+          <FaChevronUp onClick={() => scroll.scrollToTop()} id="to-top">
             <i className="fa fa-chevron-up" aria-hidden="true"></i>
           </FaChevronUp>
         </div>

@@ -1,22 +1,26 @@
+#plus {
+  margin-right: -30px;
+}
+#firstModalTitel {margin-left: 50px;
+}
 .project-centertop {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: pink;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 .project-centersnd {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: pink;
-
+  margin-bottom: 100px;
 }
 .project-centerthd {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: pink;
-
+  margin: 10px;
 }
 
 .works__fat {
@@ -24,7 +28,8 @@
 }
 
 .project {
-  background: rgb(235, 235, 235);
+  background: rgba(235, 235, 235, 0.8);
+  margin: 20px 0px;
   padding: 0px;
   width: 70vw !important;
   height: 24vw;
@@ -37,7 +42,7 @@
   border-radius: 10px;
 }
 .project-info {
-  padding: 10px 20px 10px 10px;
+  padding: 20px 20px 10px 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -50,7 +55,30 @@
 }
 .project-view {
   padding-top: 1.5vw;
+  cursor: pointer;
 }
+.modalimg__opschuif {
+  margin: 0px 35px;
+}
+.Modal__item {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+.Modal__cont {
+  color: #374054;
+}
+.Modal__buttcont {
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+  justify-content: flex-end;
+}
+.Modal__butt {
+  color: white;
+}
+
 .works__subheading {
   font-size: 18px;
   font-weight: 100;
@@ -80,6 +108,7 @@
     margin-left: 10px !important;
   }
   .project-image {
+    margin-top: 20px;
   }
 
   .project-image {
