@@ -1,7 +1,13 @@
+#Modalheading {
+  width: 100%;
+  margin-bottom: -100px;
+  text-align: center;
+}
 #plus {
   margin-right: -30px;
 }
-#firstModalTitel {margin-left: 50px;
+#firstModalTitel {
+  margin-left: 50px;
 }
 .project-centertop {
   display: flex;

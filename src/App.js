@@ -27,14 +27,13 @@ function App() {
       <Navbar2 />
       <Side />
       <div className="containersection">
-        <Lead className="section" />
-        <About className="section" />
-        <Timeline className="section" />
-        <Works className="section" />
-        <Skills className="section" id="Skills__section" />
-
-        <MailMe className="section" />
-        <Footer className="section" />
+        <Lead id="lead" className="section" />
+        <About id="about"  className="section" />
+        <Timeline id="timeline"  className="section" />
+        <Works id="works"  className="section" />
+        <Skills id="ski"  className="section" id="Skills__section" />
+        <MailMe id="mme"  className="section" />
+        <Footer id="foo"  className="section" />
       </div>
     </div>
   );

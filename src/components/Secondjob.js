@@ -68,9 +68,8 @@ function Firstjob() {
                     <div id="firstModalTitel" className="Modal__cont">
                       <strong>The full option site </strong>
                       <div>
-                        
-                        Made with the framework I love using as much libraries
-                        as I can. Buttons changing thanks to Ternary
+                        Made with the framework I love, React, using as much
+                        libraries as I can. Buttons changing thanks to Ternary
                         Expressions.
                       </div>
                     </div>
@@ -99,11 +98,15 @@ function Firstjob() {
                     <div className="Modal__cont">
                       <strong>Scrolling up or scrolling down </strong>
                       <div>
-                        I believe, if you are scrolling towards the end, you are interested, the navbar appears. If you are scrolling in the other direction, you know where you are going, no navbar.
+                        I believe, if you are scrolling towards the end, you are
+                        interested, the navbar appears. If you are scrolling in
+                        the other direction, you know where you are going, no
+                        navbar.
                       </div>
                     </div>
                   </div>
-                </div><div className="Modal__item">
+                </div>
+                <div className="Modal__item">
                   <img
                     className="modalimg__opschuif mepicwrap shadow-about"
                     src={smile}
@@ -113,7 +116,6 @@ function Firstjob() {
                     <div className="Modal__cont">
                       <strong>Well taught details </strong>
                       <div>
-                        
                         A smile in the background, a soft shadow, a thin white
                         border, you must have noticed...
                       </div>
@@ -130,7 +132,6 @@ function Firstjob() {
                     <div className="Modal__cont">
                       <strong>A side bar </strong>
                       <div>
-                        
                         Usefull information coded in that way you have the time
                         to copy and paste.
                       </div>
@@ -147,14 +148,15 @@ function Firstjob() {
                     <div className="Modal__cont">
                       <strong>Normal is for others </strong>
                       <div>
-                        
                         Thanks to the Material UI library customised to the
                         colors of this site.
                       </div>
                     </div>
                   </div>
                 </div>
-
+                <h2 data-aos="fade-up" id="Modalheading" className="heading">
+                  Walking the extra Mile...
+                </h2>
                 <div className="Modal__buttcont">
                   <div
                     onClick={() => setModalIsOpen(false)}

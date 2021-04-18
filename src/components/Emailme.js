@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios-react";
 import "../styles/Emailme.css";
 import { ThemeProvider, Button, TextField } from "@material-ui/core";
-
+import "../App.css"
 import { withStyles, createMuiTheme } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import styled from "styled-components";

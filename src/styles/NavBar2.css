@@ -5,11 +5,19 @@
   width: 92vw;
   border-radius: 0 0 10px 10px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  background: linear-gradient(to bottom, lightblue 1%, #3498db 10%, #3498db 100%);
+  background: linear-gradient(
+    to bottom,
+    lightblue 1%,
+    #3498db 10%,
+    #3498db 100%
+  );
   border: 1px rgba(255, 255, 255, 0.1) solid;
   border-width: 0px 1px 1px 2px;
 }
-.aboutLink:hover {text-decoration: none; color: red}
+
+.c-main__contact {
+  text-decoration: none !important;
+}
 
 #responsive-navbar-nav {
   margin-top: 10px !important;

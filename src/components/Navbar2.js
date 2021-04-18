@@ -1,8 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import * as ReactBootStrap from "react-bootstrap";
 import { FaPhone } from "react-icons/fa";
-import { animateScroll as scroll } from "react-scroll";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "../styles/NavBar2.css";
 import { debounce } from "./helpers";
 
@@ -58,7 +57,7 @@ const NavBar = () => {
               duration={1000}
               to="about"
             >
-              <ReactBootStrap.Nav.Link className="aboutLink">
+              <ReactBootStrap.Nav.Link id="aboutLink">
                 About Me
               </ReactBootStrap.Nav.Link>
             </Link>
@@ -70,24 +69,46 @@ const NavBar = () => {
             >
               <ReactBootStrap.Nav.Link>Experience</ReactBootStrap.Nav.Link>
             </Link>
-            <Link smooth={true} duration={1000} to="works">
-              {" "}
+            <Link
+              activeClass="activefocus"
+              smooth={true}
+              duration={1000}
+              offset={-96}
+              to="works"
+            >
               <ReactBootStrap.Nav.Link>Portfolio</ReactBootStrap.Nav.Link>
             </Link>
-            <Link smooth={true} duration={1000} to="skills">
+            <Link
+              activeClass="activefocus"
+              smooth={true}
+              duration={1000}
+              to="skills"
+              offset={-186}
+            >
               <ReactBootStrap.Nav.Link>Skills</ReactBootStrap.Nav.Link>
             </Link>
           </ReactBootStrap.Nav>
 
           <ReactBootStrap.Nav>
-            <Link smooth={true} duration={1000} to="Mailme">
+            <Link
+              activeClass="activefocus"
+              smooth={true}
+              duration={1000}
+              to="Mailme"
+              offset={-70}
+            >
               <ReactBootStrap.Nav.Link>Mail Me</ReactBootStrap.Nav.Link>
             </Link>
 
-            <Link smooth={true} duration={1000} to="Footer">
-              <ReactBootStrap.Nav.Link eventKey={2}>
+            <Link
+              activeClass="activefocus"
+              smooth={true}
+              duration={1000}
+              to="Footer"
+            >
+              <ReactBootStrap.Nav.Link eventKey={2} >
                 Contact Me
-              </ReactBootStrap.Nav.Link>{" "}
+              </ReactBootStrap.Nav.Link>
             </Link>
           </ReactBootStrap.Nav>
         </ReactBootStrap.Navbar.Collapse>
